@@ -10,22 +10,42 @@ namespace GildedRose.Tests
     [Binding]
     public class UpdateInventorySteps
     {
+        Program _program;
+
         [Given("an item with quality of (.*)")]
-        public void AnItemWithQualityOf(int quality)
+        public void GivenAnItemWithQualityOf(int quality)
         {
-            ScenarioContext.Current.Pending();
+            _program = new Program()
+            {
+                Items = new List<Item> { new Item { Name = "+5 Dexterity Vest", SellIn = 10, Quality = quality } }
+            };
         }
 
         [When("the system updates the inventory")]
         public void WhenTheSystemUpdatesTheInventory()
         {
-            ScenarioContext.Current.Pending();
+            _program.UpdateQuality(); 
         }
 
         [Then("the item should have a quality of (.*)")]
         public void ThenTheItemShouldHaveAQualityOf(int quality)
         {
-            ScenarioContext.Current.Pending();
+            Assert.AreEqual(quality, _program.Items[0].Quality);
+        }
+
+        [Given("an item with a sell in of (.*)")]
+        public void GivenAnItemWithASellInOf(int sellin)
+        {
+            _program = new Program()
+            {
+                Items = new List<Item> { new Item { Name = "+5 Dexterity Vest", SellIn = sellin, Quality = 5 } }
+            };
+        }
+
+        [Then("the item should have a sell in of (.*)")]
+        public void ThenTheItemShouldHaveASellInOf(int sellIn)
+        {
+            Assert.AreEqual(sellIn, _program.Items[0].SellIn);
         }
     }
 }
