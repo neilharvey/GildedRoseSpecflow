@@ -4,9 +4,6 @@ Gilded Rose Kata
 This kata is designed to be an exercise in working on and improving an existing codebase.
 Originally from http://iamnotmyself.com/2011/02/13/refactor-this-the-gilded-rose-kata/.
 
-The **master** branch contains the starting point of the problem and **solution** branch 
-contains a possible refactoring, with the new requirements implemented.
-
 Requirements
 ------------
 
