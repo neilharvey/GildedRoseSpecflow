@@ -62,3 +62,8 @@ Scenario: Backstage passes have no value after a concert
 	Given an item with the name "Backstage passes to a TAFKAL80ETC concert", a quality of 10 and a sell in of 0
 	When the system updates the inventory
 	Then the item should have a quality of 0
+
+Scenario: Conjured items degrade in quality twice as fast
+	Given an item with the name "Conjured water" and a quality of 10 
+	When the system updates the inventory
+	Then the item should have a quality of 8

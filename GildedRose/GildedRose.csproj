@@ -46,6 +46,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdatePolicies\CheeseUpdatePolicy.cs" />
     <Compile Include="UpdatePolicies\BackstagePassUpdatePolicy.cs" />
+    <Compile Include="UpdatePolicies\ConjuredUpdatePolicy.cs" />
     <Compile Include="UpdatePolicies\IUpdatePolicy.cs" />
     <Compile Include="UpdatePolicies\LegendaryUpdatePolicy.cs" />
     <Compile Include="UpdatePolicies\StandardUpdatePolicy.cs" />

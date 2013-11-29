@@ -23,6 +23,8 @@ namespace GildedRose
                     return new LegendaryUpdatePolicy();
                 case "Backstage passes to a TAFKAL80ETC concert":
                     return new BackstagePassUpdatePolicy();
+                case "Conjured water":
+                    return new ConjuredUpdatePolicy();
                 default:
                     return new StandardUpdatePolicy();
             }
